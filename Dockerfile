@@ -2,7 +2,7 @@ FROM golang:1.12-alpine AS build
 #Install git
 RUN apk add --no-cache git wget
 #RUN wget --no-check-certificate --no-proxy http://iju-test-bucket.s3.amazonaws.com/elb_memo.txt
-RUN wget https://iju-test-bucket.s3.amazonaws.com/elb_memo.txt
+RUN wget http://iju-test-bucket.s3.amazonaws.com/elb_memo.txt
 #Get the hello world package from a GitHub repository
 RUN go get github.com/golang/example/hello
 WORKDIR /go/src/github.com/golang/example/hello
