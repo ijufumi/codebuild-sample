@@ -9,9 +9,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - echo $IMAGE_REPO_NAME         
-      - echo $IMAGE_TAG          
-      - echo $AWS_DEFAULT_REGION
+      - echo Download from S3...
+      - aws s3 cp s3://iju-test-bucket/elb_memo.txt elb_memo.txt
       - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD  
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      

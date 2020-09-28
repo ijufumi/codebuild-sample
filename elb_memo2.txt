@@ -1,0 +1,9 @@
+- fsra-regbot-pilot
+-- listeners
+HTTPS : 443 ELBSecurityPolicy-2016-08   d464d985-beb9-4f0a-9ac6-383ce99ab945 (ACM)  fsra-regbot-pilot-api
+HTTPS : 1443    ELBSecurityPolicy-2016-08   d464d985-beb9-4f0a-9ac6-383ce99ab945 (ACM)  fsra-regbot-pilot-api-8180
+HTTPS : 5005    ELBSecurityPolicy-2016-08   d464d985-beb9-4f0a-9ac6-383ce99ab945 (ACM)  fsra-regbot-pilot-websocket
+HTTPS : 5105    ELBSecurityPolicy-2016-08   d464d985-beb9-4f0a-9ac6-383ce99ab945 (ACM)  fsra-regbot-pilot-websocket-5105
+
+-- security group
+sg-00e95c4b19c91ceab    fsra-regbot-pilot-api   security group for API
